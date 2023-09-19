@@ -13,6 +13,7 @@ dotenv.config();
 
 app.use(express.json());
 
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true}).then(() =>{
     console.log("Database Connected")
 })
